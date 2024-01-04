@@ -1,64 +1,94 @@
 #include <iostream>
-using namespace std;
+int Addition(), Subtraction(), Multipliction(), Division();
+
+
+int Addition() 
+{
+ std::cout << "Please input value 1:";
+                std::cin >> val1;
+                std::cout << "Please input value 2:";
+                std::cin >> val2;
+                std::cout << val1 << " + " << val2 << " = " << val1 + val2 << "\n";
+                return 0;
+}
+
+int subtraction()
+{
+ std::cout << "Please input value 1:";
+                std::cin >> val1;
+                std::cout << "Please input value 2:";
+                std::cin >> val2;
+                std::cout << val1 << " - " << val2 << " = " << val1 - val2 << "\n";
+                return 0;
+}
+
+int multiplication()
+{
+ std::cout << "Please input value 1:";
+                std::cin >> val1;
+                std::cout << "Please input value 2:";
+                std::cin >> val2;
+                std::cout << val1 << " * " << val2 << " = " << val1 * val2 << "\n";
+                return 0;
+}
+
+int division()
+{
+ std::cout << "Please input value 1:";
+                std::cin >> val1;
+                std::cout << "Please input value 2:";
+                std::cin >> val2;
+                std::cout << val1 << " / " << val2 << " = " << val1 / val2 << "\n";
+                return 0;
+}
 
 int main()
 {
-	int firstNum, secondNum, condition;
-	char countinueCondiion = 'y';
-	
-	do
-	{
-		do
-		{
-			cout << "1. Addition\n";
-			cout << "2, Subtraction\n";
-			cout << "3. Multiplication\n";
-			cout << "4. Division\n";
-			cout << "Enter a Choice:\n";
-			cin >> condition;
+    int val1, val2, choice,
+    char continueChoice = 'y';
 
-			system("cls");
-			switch (condition)
-			{
-			case 1:
-				cout << "Enter a First Number";
-				cin >> firstNum;
-				cout << "Enter a Second Number",
-					cin >> secondNum;
-				cout << firstNum << " + " << secondNum << " = " << firstNum + secondNum;
-				break;
-			case 2:
-				cout << "Enter a First Number";
-				cin >> firstNum;
-				cout << "Enter a Second Number",
-					cin >> secondNum;
-				cout << firstNum << " - " << secondNum << " = " << firstNum - secondNum;
-				break;
-			case 3:
-				cout << "Enter a First Number";
-				cin >> firstNum;
-				cout << "Enter a Second Number",
-					cin >> secondNum;
-				cout << firstNum << " * " << secondNum << " = " << firstNum * secondNum;
-				break;
-			case 4:
-				cout << "Enter a First Number";
-				cin >> firstNum;
-				cout << "Enter a Second Number",
-					cin >> secondNum;
-				cout << firstNum << " / " << secondNum << " = " << firstNum / secondNum;
-			default:
-				cout << "Input incorrect\n\n";
-				break;
-			}
-		} while (choice < 0 || choice > 5);
+    do
+    {
+        do
+        {
+            std::cout
+                << "--- Please Select for Math Solution to use ---\n"
+                << "1. Add\n"
+                << "2. Subtract\n"
+                << "3. Multipliction\n"
+                << "4. Division\n"
+                << "\n"
+                << "Enter Choice: ";
+            std::cin >> choice;
 
-		std::cout << "Do you want to Contninue [y/n]:";
-		std::cin >> continueChoice;
+            std::system("cls");
 
-		std::system("cls");
-	} while (continueChoice == 'y');
-  }
+            switch (choice)
+            {
+            case 1:
+                Addition();
+                break;
+            case 2:
+                Subtraction();
+                break;
+            case 3:
+                Multipliction();
+                break;
+            case 4:
+                Division():
+                break;
+            default:
+                std::cout << "User Input Incorrect\n\n";
+                break;
+            }
+        } while (choice < 0 || choice > 5);
+
+        std::cout << "Do you want to Contninue [y/n]:";
+        std::cin >> continueChoice;
+
+        std::system("cls");
+
+    } while (continueChoice == 'y');
 }
 
 
